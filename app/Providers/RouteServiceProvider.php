@@ -9,15 +9,18 @@ use N1215\Hakudo\Router;
 use N1215\Http\Router\RouterInterface;
 use N1215\Http\Router\RoutingErrorResponderInterface;
 use N1215\Jugoya\RequestHandlerFactory;
+use N1215\Tsukuyomi\FrameworkInterface;
 
 class RouteServiceProvider
 {
     public function register(Container $container)
     {
         $container->singleton(RouterInterface::class, function (Container $container) {
+            $framework = $container->get(FrameworkInterface::class);
             $router = new Router($container->get(RequestHandlerFactory::class));
 
-            require dirname(dirname(__DIR__)) . '/routes/api.php';
+            $routingPath = $framework->path('routes/api.php');
+            require $routingPath;
 
             return $router;
         });
