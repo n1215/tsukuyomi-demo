@@ -3,16 +3,25 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use Illuminate\Container\Container;
 use N1215\Tsukuyomi\Event\AppTerminating;
+use N1215\Tsukuyomi\Event\EventManager;
 use N1215\Tsukuyomi\Event\EventManagerInterface;
-use N1215\Tsukuyomi\Providers\EventManagerServiceProvider;
+use Psr\Log\LoggerInterface;
 
-class EventServiceProvider extends EventManagerServiceProvider
+class EventServiceProvider
 {
-    protected function registerEvents(EventManagerInterface $eventManager)
+    public function register(Container $container)
     {
-        $eventManager->attach(AppTerminating::NAME, function (AppTerminating $event) {
-            // do stuff
+        $container->singleton(EventManagerInterface::class, function (Container $container) {
+            $eventManager = new EventManager();
+
+            $eventManager->attach(AppTerminating::NAME, function (AppTerminating $event) use ($container) {
+                $logger = $container->get(LoggerInterface::class);
+                $logger->info('Event: ' . $event->getName());
+            });
+
+            return $eventManager;
         });
     }
 }
