@@ -5,6 +5,7 @@
 nbproject
 .project
 .settings
+.env
 composer.lock
 vendor/
 build

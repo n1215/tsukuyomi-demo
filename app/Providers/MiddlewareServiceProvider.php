@@ -17,7 +17,11 @@ class MiddlewareServiceProvider
         });
 
         $container->singleton(BasicAuth::class, function () {
-            return new BasicAuth('user', 'password', 'Admin area');
+            return new BasicAuth(
+                getenv('BASIC_AUTH_USER'),
+                getenv('BASIC_AUTH_PASSWORD'),
+                getenv('BASIC_AUTH_REALM')
+            );
         });
     }
 }

@@ -2,10 +2,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-//Dotenv::load([
-//    'filepath' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '.env',
-//    'toEnv' => true,
-//]);
+(new \Dotenv\Dotenv(dirname(__DIR__)))->load();
 
 call_user_func(function () {
     $providerClasses = require dirname(__DIR__) . '/config/providers.php';
