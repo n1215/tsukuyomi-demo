@@ -12,17 +12,9 @@ class HandlerServiceProvider
 {
     public function register(Container $container)
     {
-        $container->singleton(GetHelloHandler::class, function () {
-            return new GetHelloHandler();
-        });
-
-        $container->singleton(HogeMiddleware::class, function () {
-            return new HogeMiddleware();
-        });
-
-        $container->singleton(FugaMiddleware::class, function () {
-            return new FugaMiddleware();
-        });
+        $container->singleton(GetHelloHandler::class);
+        $container->singleton(HogeMiddleware::class);
+        $container->singleton(FugaMiddleware::class);
     }
 }
 
