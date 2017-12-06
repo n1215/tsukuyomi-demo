@@ -21,7 +21,9 @@
         "php": ">=7.1.0",
         "zendframework/zend-diactoros": "^1.4",
         "n1215/tsukuyomi": "dev-master",
-        "n1215/hakudo": "dev-master"
+        "n1215/hakudo": "dev-master",
+        "n1215/jugoya": "dev-master",
+        "n1215/http-router": "dev-master"
     },
     "autoload": {
         "psr-4": {
