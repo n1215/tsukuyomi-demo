@@ -1,5 +1,5 @@
 <?php
 
 return [
-    \App\Http\Middleware\FugaMiddleware::class,
+    \App\Http\Middleware\BenchMark::class,
 ];

@@ -8,3 +8,4 @@ nbproject
 composer.lock
 vendor/
 build
+storage/logs/*.log

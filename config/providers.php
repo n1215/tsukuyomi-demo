@@ -10,5 +10,7 @@ return [
     // application service providers
     \App\Providers\EventServiceProvider::class,
     \App\Providers\HandlerServiceProvider::class,
+    \App\Providers\LogServiceProvider::class,
+    \App\Providers\MiddlewareServiceProvider::class,
     \App\Providers\RouteServiceProvider::class,
 ];

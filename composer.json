@@ -23,7 +23,8 @@
         "n1215/tsukuyomi": "dev-master",
         "n1215/hakudo": "dev-master",
         "n1215/jugoya": "dev-master",
-        "n1215/http-router": "dev-master"
+        "n1215/http-router": "dev-master",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {
