@@ -17,7 +17,7 @@ use N1215\Tsukuyomi\HttpApplication;
 use N1215\Tsukuyomi\HttpApplicationInterface;
 use Zend\Diactoros\Response\SapiEmitter;
 
-class HttpApplicationServiceProvider
+class HttpApplicationServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

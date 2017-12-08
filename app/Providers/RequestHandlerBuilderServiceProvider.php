@@ -7,7 +7,7 @@ use Illuminate\Container\Container;
 use N1215\Jugoya\RequestHandlerBuilderInterface;
 use N1215\Jugoya\LazyRequestHandlerBuilder;
 
-class RequestHandlerBuilderServiceProvider
+class RequestHandlerBuilderServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

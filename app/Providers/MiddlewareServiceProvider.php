@@ -8,7 +8,7 @@ use App\Http\Middleware\BenchMark;
 use Illuminate\Container\Container;
 use Psr\Log\LoggerInterface;
 
-class MiddlewareServiceProvider
+class MiddlewareServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

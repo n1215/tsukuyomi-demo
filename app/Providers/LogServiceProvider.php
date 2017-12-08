@@ -9,7 +9,7 @@ use Monolog\Logger;
 use N1215\Tsukuyomi\FrameworkInterface;
 use Psr\Log\LoggerInterface;
 
-class LogServiceProvider
+class LogServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

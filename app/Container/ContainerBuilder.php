@@ -3,26 +3,40 @@ declare(strict_types=1);
 
 namespace App\Container;
 
+use App\Providers\ServiceProviderInterface;
 use Illuminate\Container\Container;
 
 class ContainerBuilder
 {
-    /** @var string[]  */
-    private $providerClasses;
+    /** @var ServiceProviderInterface[] */
+    private $providers;
 
     /**
      * @param string[] $providerClasses
      */
     public function __construct(array $providerClasses)
     {
-        $this->providerClasses = $providerClasses;
+        $this->providers = [];
+        foreach($providerClasses as $providerClass) {
+            $this->addProvider($providerClass);
+        }
+    }
+
+    private function addProvider(string $providerClass)
+    {
+        $provider = new $providerClass();
+        if (!is_subclass_of($providerClass, ServiceProviderInterface::class)) {
+            throw new \InvalidArgumentException('provider must implement' . ServiceProviderInterface::class . '.');
+        }
+
+        $this->providers[] = $provider;
     }
 
     public function build(): Container
     {
         $container = new Container();
-        foreach ($this->providerClasses as $providerClass) {
-            (new $providerClass())->register($container);
+        foreach ($this->providers as $provider) {
+            $provider->register($container);
         }
 
         return $container;

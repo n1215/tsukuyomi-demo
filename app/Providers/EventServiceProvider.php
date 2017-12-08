@@ -9,7 +9,7 @@ use N1215\Tsukuyomi\Event\EventManager;
 use N1215\Tsukuyomi\Event\EventManagerInterface;
 use Psr\Log\LoggerInterface;
 
-class EventServiceProvider
+class EventServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

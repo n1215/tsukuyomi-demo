@@ -6,7 +6,7 @@ namespace App\Providers;
 use App\Http\Handlers\GetHelloHandler;
 use Illuminate\Container\Container;
 
-class HandlerServiceProvider
+class HandlerServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {

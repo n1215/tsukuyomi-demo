@@ -11,7 +11,7 @@ use N1215\Http\Router\RoutingErrorResponderInterface;
 use N1215\Jugoya\RequestHandlerBuilderInterface;
 use N1215\Tsukuyomi\FrameworkInterface;
 
-class RouteServiceProvider
+class RouteServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $container)
     {
