@@ -8,7 +8,7 @@
         "framework",
         "web"
     ],
-    "type": "library",
+    "type": "project",
     "homepage": "https://github.com/n1215/tsukuyomi-demo",
     "license": "MIT",
     "authors": [
@@ -19,13 +19,11 @@
     ],
     "require": {
         "php": ">=7.1.0",
+        "n1215/tsukuyomi": "^0.3",
+        "n1215/hakudo": "^0.4",
+        "vlucas/phpdotenv": "^2.4",
         "zendframework/zend-diactoros": "^1.4",
-        "n1215/tsukuyomi": "dev-master",
-        "n1215/hakudo": "dev-master",
-        "n1215/jugoya": "dev-master",
-        "n1215/http-router": "dev-master",
-        "monolog/monolog": "^1.23",
-        "vlucas/phpdotenv": "^2.4"
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {
