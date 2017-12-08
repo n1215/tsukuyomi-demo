@@ -26,7 +26,7 @@ class HttpApplicationServiceProvider
         $this->registerHttpApplication($container);
     }
 
-    function registerBootLoader(Container $container)
+    private function registerBootLoader(Container $container)
     {
         $container->singleton(BootLoaderInterface::class, function (Container $container) {
             /** @var FrameworkInterface $framework */
