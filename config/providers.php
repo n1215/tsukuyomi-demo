@@ -1,15 +1,11 @@
 <?php
 
 return [
-    // framework service providers
-    \N1215\Tsukuyomi\Providers\BootLoaderServiceProvider::class,
-    \N1215\Tsukuyomi\Providers\HttpApplicationServiceProvider::class,
-    \N1215\Tsukuyomi\Providers\RequestHandlerBuilderServiceProvider::class,
-
-    // application service providers
     \App\Providers\EventServiceProvider::class,
     \App\Providers\HandlerServiceProvider::class,
+    \App\Providers\HttpApplicationServiceProvider::class,
     \App\Providers\LogServiceProvider::class,
     \App\Providers\MiddlewareServiceProvider::class,
+    \App\Providers\RequestHandlerBuilderServiceProvider::class,
     \App\Providers\RouteServiceProvider::class,
 ];

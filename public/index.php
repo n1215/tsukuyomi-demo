@@ -2,16 +2,23 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-(new \Dotenv\Dotenv(dirname(__DIR__)))->load();
+use Illuminate\Container\Container;
+use App\Container\ContainerBuilder;
+use N1215\Tsukuyomi\FrameworkInterface;
+use N1215\Tsukuyomi\Framework;
+use N1215\Tsukuyomi\HttpApplicationInterface;
+
+(new Dotenv\Dotenv(dirname(__DIR__)))->load();
 
 call_user_func(function () {
     $providerClasses = require dirname(__DIR__) . '/config/providers.php';
-    $container = (new \N1215\Tsukuyomi\ContainerBuilder($providerClasses))->build();
-    $container->singleton(\N1215\Tsukuyomi\FrameworkInterface::class, function (\Illuminate\Container\Container $container) {
-        return new \N1215\Tsukuyomi\Framework($container, realpath(__DIR__ . '/../'));
+    $container = (new ContainerBuilder($providerClasses))->build();
+    $container->singleton(FrameworkInterface::class, function (Container $container) {
+        return new Framework($container, dirname(__DIR__));
     });
-    $app =  $container->get(\N1215\Tsukuyomi\HttpApplicationInterface::class);
+    /** @var HttpApplicationInterface $app */
+    $app =  $container->get(HttpApplicationInterface::class);
 
-    $request = \Zend\Diactoros\ServerRequestFactory::fromGlobals();
+    $request = Zend\Diactoros\ServerRequestFactory::fromGlobals();
     $app->run($request);
 });

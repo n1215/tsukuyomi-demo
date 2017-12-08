@@ -19,9 +19,11 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "n1215/tsukuyomi": "^0.3",
+        "n1215/tsukuyomi": "^0.4",
+        "n1215/jugoya": "^0.7",
         "n1215/hakudo": "^0.4",
         "vlucas/phpdotenv": "^2.4",
+        "illuminate/container": "^5.5",
         "zendframework/zend-diactoros": "^1.4",
         "monolog/monolog": "^1.23"
     },
