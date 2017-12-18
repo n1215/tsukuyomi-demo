@@ -8,5 +8,21 @@
 
 A PSR-7/PSR-15 minimal Web framework demo.
 
+# Install
+```
+# create project
+composer create-project n1215/tsukuyomi-demo your-directory-name
+
+cd your-directory-name
+
+# start development server
+php -S 127.0.0.1:8000 public/index.html
+
+# access
+curl http://127.0.0.1:8000/hello/
+# ["Hello, world!"]
+```
+
+
 # License
 The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
