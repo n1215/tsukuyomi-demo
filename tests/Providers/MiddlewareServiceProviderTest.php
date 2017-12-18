@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Http\Middleware\BasicAuth;
-use App\Http\Middleware\BenchMark;
+use App\Middleware\BasicAuth;
+use App\Middleware\BenchMark;
 use Illuminate\Container\Container;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;

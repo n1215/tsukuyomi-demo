@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Http\Routing\RoutingErrorResponder;
+use App\Routing\RoutingErrorResponder;
 use Illuminate\Container\Container;
 use N1215\Hakudo\Router;
 use N1215\Http\Router\RouterInterface;
