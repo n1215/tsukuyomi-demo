@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Handlers;
+namespace App\Handlers;
 
 use PHPUnit\Framework\TestCase;
 use Zend\Diactoros\ServerRequest;

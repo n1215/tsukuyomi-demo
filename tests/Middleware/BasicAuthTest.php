@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Middleware;
+namespace App\Middleware;
 
 use Interop\Http\Server\RequestHandlerInterface;
 use PHPUnit\Framework\MockObject\MockObject;
