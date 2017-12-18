@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Http\Handlers\GetHelloHandler;
+use App\Handlers\GetHelloHandler;
 use Illuminate\Container\Container;
 
 class HandlerServiceProvider implements ServiceProviderInterface

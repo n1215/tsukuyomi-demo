@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Handlers;
+namespace App\Handlers;
 
 use Interop\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -1,5 +1,5 @@
 <?php
 
 return [
-    \App\Http\Middleware\BenchMark::class,
+    \App\Middleware\BenchMark::class,
 ];

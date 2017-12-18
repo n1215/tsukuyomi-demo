@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Routing;
+namespace App\Routing;
 
 use N1215\Http\Router\RoutingErrorInterface;
 use N1215\Http\Router\RoutingErrorResponderInterface;
