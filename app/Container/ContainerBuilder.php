@@ -25,7 +25,7 @@ class ContainerBuilder
     private function addProvider(string $providerClass)
     {
         $provider = new $providerClass();
-        if (!is_subclass_of($providerClass, ServiceProviderInterface::class)) {
+        if (!$provider instanceof ServiceProviderInterface) {
             throw new \InvalidArgumentException('provider must implement' . ServiceProviderInterface::class . '.');
         }
 
