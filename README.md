@@ -16,7 +16,7 @@ composer create-project n1215/tsukuyomi-demo your-directory-name
 cd your-directory-name
 
 # start development server
-php -S 127.0.0.1:8000 public/index.html
+php -S 127.0.0.1:8000 public/index.php
 
 # access
 curl http://127.0.0.1:8000/hello/
