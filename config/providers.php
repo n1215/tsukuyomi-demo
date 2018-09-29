@@ -8,4 +8,5 @@ return [
     \App\Providers\MiddlewareServiceProvider::class,
     \App\Providers\RequestHandlerBuilderServiceProvider::class,
     \App\Providers\RouteServiceProvider::class,
+    \App\Providers\ValidationServiceProvider::class,
 ];

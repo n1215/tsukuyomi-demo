@@ -19,13 +19,14 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "n1215/tsukuyomi": "^0.6",
-        "n1215/jugoya": "^1.0",
-        "n1215/hakudo": "^0.6",
-        "vlucas/phpdotenv": "^2.4",
         "illuminate/container": "^5.5",
-        "zendframework/zend-diactoros": "^1.4",
-        "monolog/monolog": "^1.23"
+        "illuminate/validation": "^5.5",
+        "monolog/monolog": "^1.23",
+        "n1215/hakudo": "^0.6",
+        "n1215/jugoya": "^1.0",
+        "n1215/tsukuyomi": "^0.6",
+        "vlucas/phpdotenv": "^2.4",
+        "zendframework/zend-diactoros": "^1.4"
     },
     "autoload": {
         "psr-4": {

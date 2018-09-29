@@ -8,6 +8,7 @@ use Zend\Diactoros\Response\JsonResponse;
 /** @var \N1215\Hakudo\Router $router */
 
 $router->add(Path::get('|/hello/(?<name>[A-z0-9]*)$|'), \App\Handlers\GetHelloHandler::class)->name('hello');
+$router->add(Path::get('|/validation$|'), \App\Handlers\SampleValidationHandler::class)->name('hello');
 $router->add(Path::get('|/closure$|'), function (Request $request): Response {
     return new JsonResponse(['closure']);
 })->name('closure');
