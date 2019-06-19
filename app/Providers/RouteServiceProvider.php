@@ -6,8 +6,9 @@ namespace App\Providers;
 use App\Routing\RoutingErrorResponder;
 use Illuminate\Container\Container;
 use N1215\Hakudo\Router;
+use N1215\Http\Router\Result\RoutingResultFactory;
 use N1215\Http\Router\RouterInterface;
-use N1215\Http\Router\RoutingErrorResponderInterface;
+use N1215\Http\Router\Handler\RoutingErrorResponderInterface;
 use N1215\Jugoya\RequestHandlerBuilderInterface;
 use N1215\Tsukuyomi\FrameworkInterface;
 
@@ -17,7 +18,7 @@ class RouteServiceProvider implements ServiceProviderInterface
     {
         $container->singleton(RouterInterface::class, function (Container $container) {
             $framework = $container->get(FrameworkInterface::class);
-            $router = new Router($container->get(RequestHandlerBuilderInterface::class));
+            $router = new Router($container->get(RequestHandlerBuilderInterface::class), new RoutingResultFactory());
 
             $routingPath = $framework->path('routes/api.php');
             require $routingPath;

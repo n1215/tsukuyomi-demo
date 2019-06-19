@@ -3,16 +3,22 @@ declare(strict_types=1);
 
 namespace App\Routing;
 
-use N1215\Http\Router\RoutingErrorInterface;
-use N1215\Http\Router\RoutingErrorResponderInterface;
+use N1215\Http\Router\Exception\RouteNotFoundException;
+use N1215\Http\Router\Exception\RoutingException;
+use N1215\Http\Router\Handler\RoutingErrorResponderInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\JsonResponse;
 
 class RoutingErrorResponder implements RoutingErrorResponderInterface
 {
-    public function respond(ServerRequestInterface $request, RoutingErrorInterface $error): ResponseInterface
+    public function supports(RoutingException $exception): bool
     {
-        return new JsonResponse(['message' => $error->getMessage()], $error->getStatusCode());
+        return $exception instanceof RouteNotFoundException;
+    }
+
+    public function respond(RoutingException $exception, ServerRequestInterface $request): ResponseInterface
+    {
+        return new JsonResponse(['message' => $exception->getMessage()], 404);
     }
 }

@@ -7,7 +7,7 @@ use App\Routing\RoutingErrorResponder;
 use Illuminate\Container\Container;
 use N1215\Hakudo\Router;
 use N1215\Http\Router\RouterInterface;
-use N1215\Http\Router\RoutingErrorResponderInterface;
+use N1215\Http\Router\Handler\RoutingErrorResponderInterface;
 use N1215\Jugoya\LazyRequestHandlerBuilder;
 use N1215\Jugoya\RequestHandlerBuilderInterface;
 use N1215\Tsukuyomi\Framework;

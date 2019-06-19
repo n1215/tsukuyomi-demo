@@ -21,7 +21,7 @@
         "php": ">=7.1.0",
         "n1215/tsukuyomi": "^0.6",
         "n1215/jugoya": "^1.0",
-        "n1215/hakudo": "^0.6",
+        "n1215/hakudo": "^0.7",
         "vlucas/phpdotenv": "^2.4",
         "illuminate/container": "^5.5",
         "zendframework/zend-diactoros": "^1.4",

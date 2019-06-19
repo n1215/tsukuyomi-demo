@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Routing;
 
-use N1215\Http\Router\RoutingError;
+use N1215\Http\Router\Exception\RouteNotFoundException;
 use PHPUnit\Framework\TestCase;
 use Zend\Diactoros\ServerRequest;
 
@@ -13,11 +13,11 @@ class RoutingErrorResponderTest extends TestCase
     {
         $request = new ServerRequest();
         $responder = new RoutingErrorResponder();
-        $statusCode = 404;
         $message = 'route not found';
-        $routingError = new RoutingError($statusCode, $message);
+        $statusCode = 404;
+        $routingException = new RouteNotFoundException($message);
 
-        $response = $responder->respond($request, $routingError);
+        $response = $responder->respond($routingException, $request);
 
         $this->assertEquals($statusCode, $response->getStatusCode());
         $this->assertEquals('application/json', $response->getHeaderLine('Content-Type'));
