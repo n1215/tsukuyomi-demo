@@ -19,12 +19,13 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "n1215/tsukuyomi": "^0.6",
+        "n1215/tsukuyomi": "^0.7",
         "n1215/jugoya": "^1.0",
         "n1215/hakudo": "^0.7",
         "vlucas/phpdotenv": "^2.4",
         "illuminate/container": "^5.5",
-        "zendframework/zend-diactoros": "^1.4",
+        "laminas/laminas-diactoros": "^2.2",
+        "laminas/laminas-httphandlerrunner": "^1.1",
         "monolog/monolog": "^1.23"
     },
     "autoload": {
@@ -33,7 +34,7 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^7.5"
     },
     "autoload-dev": {
         "psr-4": {

@@ -7,7 +7,7 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response\TextResponse;
+use Laminas\Diactoros\Response\TextResponse;
 
 class BasicAuth implements MiddlewareInterface
 {

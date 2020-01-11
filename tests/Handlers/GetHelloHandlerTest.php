@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Handlers;
 
 use PHPUnit\Framework\TestCase;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class GetHelloHandlerTest extends TestCase
 {

@@ -5,7 +5,7 @@ namespace App\Routing;
 
 use N1215\Http\Router\Exception\RouteNotFoundException;
 use PHPUnit\Framework\TestCase;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\ServerRequest;
 
 class RoutingErrorResponderTest extends TestCase
 {

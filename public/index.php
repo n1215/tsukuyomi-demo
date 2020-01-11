@@ -19,6 +19,6 @@ call_user_func(function () {
     /** @var HttpApplicationInterface $app */
     $app =  $container->get(HttpApplicationInterface::class);
 
-    $request = Zend\Diactoros\ServerRequestFactory::fromGlobals();
+    $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals();
     $app->run($request);
 });

@@ -9,8 +9,8 @@ use N1215\Tsukuyomi\Event\EventManager;
 use N1215\Tsukuyomi\Event\EventManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
 
 class EventServiceProviderTest extends TestCase
 {

@@ -15,7 +15,7 @@ use N1215\Tsukuyomi\Event\EventManagerInterface;
 use N1215\Tsukuyomi\FrameworkInterface;
 use N1215\Tsukuyomi\HttpApplication;
 use N1215\Tsukuyomi\HttpApplicationInterface;
-use Zend\Diactoros\Response\SapiEmitter;
+use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
 
 class HttpApplicationServiceProvider implements ServiceProviderInterface
 {
